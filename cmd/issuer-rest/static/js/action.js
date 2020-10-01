@@ -61,6 +61,7 @@ $(document).ready(function () {
             $('#didCommScope').val("CreditCardStatement");
             $('#adapterProfile').val("tb-cc-issuer");
             $(this).data('clicked', true);
+            document.getElementById('didFormSubmit').click();
         }
     });
 
@@ -71,6 +72,7 @@ $(document).ready(function () {
             $('#adapterProfile').val("tb-dl-issuer");
             $('#assuranceScope').val("mdlevidence");
             $(this).data('clicked', true);
+            document.getElementById('didFormSubmit').click();
         }
     });
 
@@ -90,6 +92,7 @@ $(document).ready(function () {
             $('#didCommScope').val("CreditScore");
             $('#adapterProfile').val("tb-cr-issuer");
             $(this).data('clicked', true);
+            document.getElementById('didFormSubmit').click();
         }
     });
 
@@ -122,10 +125,6 @@ $(document).ready(function () {
 
             $('#demoSetupForm').attr('action', '/login?');
 
-        } else if ($("#travelCard").data('clicked')) {
-
-            $('#demoSetupForm').attr('action', '/login?');
-
         }  else if ($("#prCard").data('clicked')) {
 
             $('#demoSetupForm').attr('action', '/login?');
@@ -141,7 +140,7 @@ $(document).ready(function () {
     });
 
     $('#didCommDemo').submit(function () {
-
+4
         if($('#creditCard').data('clicked'))
         {
             $('#didCommDemo').attr('action', '/login?');
@@ -150,7 +149,7 @@ $(document).ready(function () {
         {
             $('#didCommDemo').attr('action', '/login?');
 
-        } else ($("#creditScore").data('clicked'))
+        } else if ($("#creditScore").data('clicked'))
         {
             $('#didCommDemo').attr('action', '/login?');
         }
